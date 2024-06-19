@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
 
         <div className="px-4 sm:px-10 md:px-20">
           <div className="flex flex-col lg:flex-row justify-between items-center w-full text-lg sm:text-xl font-[400] text-grey border-t border-white pt-6 lg:pt-6 px-4">
-            <p className="text-center lg:text-left">Copyright &copy; 2024 Maison D&apos; Ophelia</p>
+            <p className="text-center lg:text-left">Copyright 2024 Maison D Ophelia</p>
             <div className="flex gap-4 mt-4 lg:mt-0">
               <p> All Rights Reserved | </p>
               <a href="#" className="hover:text-gray-400">
