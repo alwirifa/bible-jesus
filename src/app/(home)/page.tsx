@@ -124,7 +124,7 @@ export default function Home() {
         ref={(el) => {
           sectionsRef.current[4] = el;
         }}
-        id="4"
+        id="banner4"
         className="snap-start text-black"
       >
         <div className="snap-start h-screen w-full text-black">
@@ -164,7 +164,7 @@ export default function Home() {
                 onClick={() => scrollToSection(1)}
               >
                 <div
-                  className={`bg-white h-2 w-2 rounded-full  ${
+                  className={` h-2 w-2 rounded-full  ${
                     activeSection === "1" || activeSection === "header" ? "bg-white" : "bg-transparent"
                   }`}
                 ></div>
@@ -174,7 +174,7 @@ export default function Home() {
                 onClick={() => scrollToSection(2)}
               >
                 <div
-                  className={`bg-white h-2 w-2 rounded-full  ${
+                  className={` h-2 w-2 rounded-full  ${
                     activeSection === "2" ? "bg-white" : "bg-transparent"
                   }`}
                 ></div>
@@ -184,7 +184,7 @@ export default function Home() {
                 onClick={() => scrollToSection(3)}
               >
                 <div
-                  className={`bg-white h-2 w-2 rounded-full  ${
+                  className={` h-2 w-2 rounded-full  ${
                     activeSection === "3" ? "bg-white" : "bg-transparent"
                   }`}
                 ></div>
@@ -194,8 +194,8 @@ export default function Home() {
                 onClick={() => scrollToSection(4)}
               >
                 <div
-                  className={`bg-white h-2 w-2 rounded-full  ${
-                    activeSection === "4" ? "bg-white" : "bg-transparent"
+                  className={` h-2 w-2 rounded-full  ${
+                    activeSection === "banner4" ? "bg-white" : "bg-transparent"
                   }`}
                 ></div>
               </button>
