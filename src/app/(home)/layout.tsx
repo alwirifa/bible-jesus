@@ -7,10 +7,10 @@ type Props = {
 
 const DashboardLayout = ({ children }: Props) => {
   return (
-    <div className="h-full relative">
-      <Header />
-      <main className="px-3 lg:px-14">{children}</main>
-      <Footer />
+    <div className="relative">
+      {/* <Header /> */}
+      <main className=" bg-primary">{children}</main>
+      {/* <Footer /> */}
     </div>
   );
 };

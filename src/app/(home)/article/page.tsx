@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import Header from "@/components/header";
 import Image from "next/image";
 import React from "react";
 
@@ -31,9 +32,10 @@ const articleData = [
 const Page: React.FC<Props> = () => {
   return (
     <div className="font-poppins">
+      <Header/>
       <Container>
         {articleData.map((article, index) => (
-          <div key={index} className="flex flex-col lg:flex-row gap-6 lg:gap-10 mb-10">
+          <div key={index} className="flex flex-col lg:flex-row gap-6 lg:gap-10 mb-10 bg-white">
             <div className="flex lg:w-[550px] xl:w-[650px] 2xl:w-[750px]">
               <div className="relative h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] lg:w-[550px] w-full">
                 <Image

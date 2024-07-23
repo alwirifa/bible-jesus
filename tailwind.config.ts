@@ -10,6 +10,7 @@ const config = {
   ],
   prefix: "",
   theme: {
+    
     container: {
       center: true,
       padding: "2rem",
@@ -18,9 +19,13 @@ const config = {
       },
     },
     extend: {
+      
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         dm_sans: ["var(--font-dm_sans)"],
+      },
+      backgroundImage: {
+        'banner3': "url('/images/banner3.webp')",
       },
       colors: {
         grey: "#909090",
@@ -30,7 +35,7 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#FFFAFA",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

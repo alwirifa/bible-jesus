@@ -1,11 +1,15 @@
-import React from 'react'
+import Header from "@/components/header";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className='h-full py-32'>contact</div>
-  )
-}
+    <div>
+      <Header />
+      <div className="h-full py-32">contact</div>
+    </div>
+  );
+};
 
-export default page
+export default page;
