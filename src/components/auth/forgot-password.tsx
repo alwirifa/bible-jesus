@@ -81,7 +81,7 @@ export default function ForgotPassword({ email, code }: Props) {
           />
         </div>
         <p className="text-white italic">
-          "The Scents of Flower, And Sweet Memory of Butterflies" <br />
+          The Scents of Flower, And Sweet Memory of Butterflies <br />
           -span
         </p>
       </div>

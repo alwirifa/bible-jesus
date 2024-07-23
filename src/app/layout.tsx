@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { Poppins, DM_Sans } from "next/font/google";
+import { Suspense } from "react";
 
 const poppins_init = Poppins({
   subsets: ['latin'],
@@ -31,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Suspense>
+
       <body className={`${poppins_init.variable} ${dm_sans_init.variable}`}>{children}</body>
+      </Suspense>
     </html>
   );
 }

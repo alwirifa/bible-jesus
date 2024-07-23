@@ -32,7 +32,7 @@ function Sidebar() {
       <aside className="h-screen border-r  p-6 space-y-6">
         <h3 className="text-xl font-semibold">Logo</h3>
         {menuLink.map((menu, index) => (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2" key={index}>
             <Link href={menu.route}>{menu.label}</Link>
           </div>
         ))}
