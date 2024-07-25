@@ -3,6 +3,7 @@
 import Container from "@/components/container";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { CarouselHome } from "@/components/user/home/carousel";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
@@ -56,6 +57,8 @@ export default function Home() {
         <Header />
       </section>
 
+     
+
       <section
         ref={(el) => {
           sectionsRef.current[0] = el;
@@ -64,47 +67,40 @@ export default function Home() {
         className=" text-black snap-end"
       >
         <Container>
-          <div className="flex items-center justify-between p-6 h-[500px]">
-            <div className="flex  h-full relative items-center">
-              <div className="translate-x-10 -translate-y-10">
-                <Image
-                  src={"/images/logoBanner1.png"}
-                  alt="logo"
-                  height={300}
-                  width={300}
-                />
-              </div>
-              <div className="flex flex-col absolute bottom-0 left-0">
-                <p>The Scents of Flower </p>
-                <p>And Sweet Memory of Butterflies</p>
-              </div>
-            </div>
-
-            <div className="flex gap-16">
-              <div className="flex flex-col gap-16">
-                <Image
-                  src={"/images/imageb1.png"}
-                  alt="logo"
-                  height={150}
-                  width={150}
-                />
-
-                <Image
-                  src={"/images/imageb2.png"}
-                  alt="logo"
-                  height={150}
-                  width={150}
-                />
-              </div>
-              <Image
-                src={"/images/imageb3.png"}
-                alt="logo"
-                height={300}
-                width={300}
-              />
+        <div className="flex p-6 h-[500px] ">
+          <div className="flex flex-col items-center justify-center w-full relative">
+            <img
+              src={"/images/home/banner-logo1.webp"}
+              alt="logo"
+              className="w-[350px] h-auto"
+            />
+            <div className="absolute bottom-0 left-0 leading-[16px]">
+              <p>The Scents of Flower </p>
+              <p>And Sweet Memory of Butterflies</p>
             </div>
           </div>
-        </Container>
+          <div className="flex h-full justify-center items-center  gap-16 w-full">
+            <div className="flex flex-col gap-6">
+              <img
+                src={"/images/home/banner-image1.webp"}
+                alt="logo"
+                className="w-[150px] h-auto"
+              />
+              <img
+                src={"/images/home/banner-image2.webp"}
+                alt="logo"
+                className="w-[150px] h-auto"
+              />
+            </div>
+            <CarouselHome/>
+            {/* <img
+              src={"/images/products/perfume-antheia.webp"}
+              alt="logo"
+              className="w-auto h-[400px]"
+            /> */}
+          </div>
+        </div>
+      </Container>
       </section>
 
       <section
@@ -112,9 +108,9 @@ export default function Home() {
           sectionsRef.current[1] = el;
         }}
         id="1"
-        className="snap-start text-black"
+        className="snap-start mt-16"
       >
-        <div className="snap-start h-screen w-full relative overflow-hidden text-black">
+        <div className="snap-start h-screen w-full relative overflow-hidden ">
           <video
             src="/videos/video.mp4"
             loop
@@ -122,13 +118,12 @@ export default function Home() {
             muted
             className="absolute top-0 left-0 h-full w-full object-cover"
           ></video>
-          <div className="absolute inset-0 flex items-center justify-center text-center text-black">
+          {/* <div className="absolute inset-0 flex items-center justify-center text-center text-black">
             <h1 className="text-3xl font-bold">Hero Section</h1>
-          </div>
+          </div> */}
         </div>
       </section>
 
-      {/* Banner 3 */}
       <section
         ref={(el) => {
           sectionsRef.current[2] = el;
@@ -167,7 +162,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* DEKSRIPSI */}
+       
           <div className=" h-auto flex flex-col gap-4 items-center text-center pt-6 px-6">
             <h1 className="text-4xl font-semibold">Maison D&apos; Ophelia</h1>
             <p className="max-w-[34rem]">
@@ -179,7 +174,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner 4 */}
       <section
         ref={(el) => {
           sectionsRef.current[3] = el;
@@ -275,12 +269,12 @@ export default function Home() {
         <Footer />
       </footer>
 
-      {activeSection === "footer" ? (
+      {/* {activeSection === "footer" ? (
         <div></div>
       ) : (
         <div>
           <div className={`fixed bottom-1/2 top-1/2 left-0`}>
-            {/* <p>Current Section: {activeSection}</p> */}
+
             <div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
               <button
                 className={`w-4 h-4 rounded-full border-2 flex justify-center items-center`}
@@ -339,7 +333,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
