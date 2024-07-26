@@ -53,7 +53,7 @@ export default function Home() {
           sectionsRef.current[0] = el;
         }}
         id="header"
-        className=" text-black snap-start md:h-full h-[100svh]"
+        className=" text-black snap-start md:h-[700px] h-[100svh]"
       >
         <Header />
 
@@ -199,8 +199,8 @@ export default function Home() {
         className="hidden md:block snap-start text-black"
       >
         <Container>
-          <div className="snap-start h-screen w-full text-black flex justify-between gap-16 p-16 ">
-            <div className="h-full w-full md:flex items-center  hidden ">
+          <div className="snap-start h-screen w-full text-black flex justify-between py-16 ">
+            <div className="h-full w-full md:flex items-center hidden">
               <img
                 src={"/images/home/banner3-image1.webp"}
                 alt="logo"
@@ -208,29 +208,31 @@ export default function Home() {
               />
             </div>
             <div className="h-full w-full flex flex-col justify-between gap-4 px-2 md:px-0">
-              <div className="w-full flex justify-center items-center ">
+              <div className="h-full w-full flex justify-center items-center ">
                 <img
                   src={"/images/home/banner3-image2.webp"}
                   alt="logo"
                   className=" h-[400px] w-auto"
                 />
               </div>
-              <h1 className="text-4xl md:text-7xl font-normal mt-6 font-scheherazade">
-                Follow The Fragnance
-              </h1>
-              <p className="font-normal max-w-xl text-justify text-[16px] md:text-[20px]">
-                Our perfumes are meticulously crafted using natural raw
-                materials sourced both locally and from the finest imports,
-                employing traditional production methods from Kannauj, Jaipur,
-                and New York—from flower harvesting and distillation to
-                blending—all done in the traditional manner.
-              </p>
-              <Link
-                href={`/catalogue`}
-                className="bg-black font-normal font-poppins px-4 py-2  text-white max-w-max"
-              >
-                VIEW OUR COLLECTION
-              </Link>
+              <div className="flex flex-col gap-4">
+                <h1 className="text-4xl md:text-4xl font-normal mt-6 font-scheherazade">
+                  Follow The Fragnance
+                </h1>
+                <p className="font-normal max-w-xl text-justify text-[16px] md:text-[16px]">
+                  Our perfumes are meticulously crafted using natural raw
+                  materials sourced both locally and from the finest imports,
+                  employing traditional production methods from Kannauj, Jaipur,
+                  and New York—from flower harvesting and distillation to
+                  blending—all done in the traditional manner.
+                </p>
+                <Link
+                  href={`/catalogue`}
+                  className="bg-black font-normal font-poppins px-4 py-2  text-white max-w-max"
+                >
+                  VIEW OUR COLLECTION
+                </Link>
+              </div>
             </div>
           </div>
         </Container>
@@ -252,9 +254,9 @@ export default function Home() {
             />
             <div className="flex flex-col p-4 gap-8  justify-center items-center font-poppins">
               <h1 className="text-base max-w-[1120px] text-center font-normal leading-[30px] ">
-                Throughout its evolution, Maison dOphelia has introduced
-                several fragrance collections including Antheia, Rose de Mai,
-                Medusa, Siren 1984, Odilia, and Papillon.
+                Throughout its evolution, Maison dOphelia has introduced several
+                fragrance collections including Antheia, Rose de Mai, Medusa,
+                Siren 1984, Odilia, and Papillon.
               </h1>
               <h1 className="text-base max-w-[1120px] text-center font-normal leading-[30px]  ">
                 Our perfumes are Eau de Extrait and Eau de Parfum, processed
