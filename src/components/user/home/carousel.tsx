@@ -74,7 +74,7 @@ export function CarouselHome() {
                     <img
                       src={perfume.img}
                       alt={perfume.label}
-                      className="w-auto h-[400px]"
+                      className="w-auto h-[300px] md:h-[400px]"
                     />
                   </div>
                 </CardContent>

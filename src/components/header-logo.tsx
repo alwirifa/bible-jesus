@@ -9,7 +9,7 @@ const HeaderLogo = (props: Props) => {
     <div>
       <Link href={"/"}>
         <div className="items-center flex">
-          <Image src={"/images/MaisonLogo.svg"} alt="logo" height={90} width={250} />
+          <img src={"/images/MaisonLogo.svg"} alt="logo" className="h-12 md:h-16 w-auto" />
         </div>
       </Link>
     </div>

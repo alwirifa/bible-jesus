@@ -53,27 +53,19 @@ export default function Home() {
           sectionsRef.current[0] = el;
         }}
         id="header"
-        // className=" text-black snap-start"
+        className=" text-black snap-start md:h-full h-[100svh]"
       >
         <Header />
-      </section>
 
-      <section
-        ref={(el) => {
-          sectionsRef.current[0] = el;
-        }}
-        id="header"
-        className=" text-black snap-end"
-      >
         <Container>
           <div className="flex flex-col md:flex-row p-6 md:h-[500px] h-full">
             <div className="flex flex-col items-center justify-center w-full relative">
               <img
                 src={"/images/home/banner-logo1.webp"}
                 alt="logo"
-                className="w-[350px] h-auto"
+                className="w-auto h-24 md:h-32"
               />
-              <div className="md:absolute mt-6 text-center text-xl md:text-left md:mt-0 bottom-0 left-0 leading-[20px] font-scheherazade">
+              <div className="md:absolute mt-6 text-center text-sm md:text-xl md:text-left md:mt-0 bottom-0 left-0 leading-[20px] font-scheherazade">
                 <p>The Scents of Flower </p>
                 <p>And Sweet Memory of Butterflies</p>
               </div>
@@ -104,14 +96,32 @@ export default function Home() {
         id="1"
         className="snap-start "
       >
-        <div className="snap-start h-screen w-full relative overflow-hidden ">
+        <div className="snap-start h-[100svh]  w-full relative overflow-hidden flex flex-col ">
           <video
             src="/videos/video.mp4"
             loop
             autoPlay
             muted
-            className="absolute top-0 left-0 h-full w-full object-cover"
+            className="block md:absolute top-0 left-0 h-[300px] md:h-full w-full object-cover"
           ></video>
+          <div className="sm:hidden flex flex-col gap-4 px-6">
+            <h1 className="text-4xl md:text-7xl font-normal mt-6 font-scheherazade">
+              Follow The Fragnance
+            </h1>
+            <p className="font-normal max-w-xl text-justify text-[16px] md:text-[20px]">
+              Our perfumes are meticulously crafted using natural raw materials
+              sourced both locally and from the finest imports, employing
+              traditional production methods from Kannauj, Jaipur, and New
+              York—from flower harvesting and distillation to blending—all done
+              in the traditional manner.
+            </p>
+            <Link
+              href={`/catalogue`}
+              className="bg-black font-normal mt-2 font-poppins px-4 py-2  text-white max-w-max"
+            >
+              VIEW OUR COLLECTION
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -122,8 +132,26 @@ export default function Home() {
         id="2"
         className="snap-start text-black"
       >
-        <div className="snap-start h-screen w-full text-black flex flex-col items-center py-6">
-          <div className="flex gap-6 h-full w-full items-center">
+        <div className="snap-start h-screen w-full text-black flex flex-col items-center md:py-6">
+          <div className="md:hidden w-full h-full flex-col gap-16 relative text-black">
+            <img
+              src={`/images/banner1.webp`}
+              alt="banner image 1"
+              className="h-[300px] w-full bg-center bg-cover"
+            />
+            <div className="mt-16 flex flex-col gap-6 text-center px-4">
+              <h1 className="text-4xl font-normal font-scheherazade">
+                Maison D&apos; Ophelia
+              </h1>
+              <p className="max-w-[48rem] font-poppins font-normal text-base">
+                is an Indonesian local perfume brand founded by Zulham Siregar,
+                who also the Perfume Creation Director with a career based in
+                Paris, France.
+              </p>
+            </div>
+          </div>
+
+          <div className="hidden md:flex gap-6 h-full w-full items-center">
             <div className="w-[10%] h-[80%] relative text-black">
               <Image
                 src={`/images/lb3.jpg`}
@@ -150,8 +178,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" h-auto flex flex-col gap-4 items-center text-center pt-6 px-6">
-            <h1 className="text-7xl font-normal font-scheherazade">Maison D&apos; Ophelia</h1>
+          <div className=" h-auto hidden md:flex flex-col gap-4 items-center text-center pt-6 px-6">
+            <h1 className="text-7xl font-normal font-scheherazade">
+              Maison D&apos; Ophelia
+            </h1>
             <p className="max-w-[48rem] font-poppins font-normal text-[20px]">
               is an Indonesian local perfume brand founded by Zulham Siregar,
               who also the Perfume Creation Director with a career based in
@@ -166,7 +196,7 @@ export default function Home() {
           sectionsRef.current[3] = el;
         }}
         id="3"
-        className="snap-start text-black"
+        className="hidden md:block snap-start text-black"
       >
         <Container>
           <div className="snap-start h-screen w-full text-black flex justify-between gap-16 p-16 ">
@@ -195,7 +225,10 @@ export default function Home() {
                 and New York—from flower harvesting and distillation to
                 blending—all done in the traditional manner.
               </p>
-              <Link href={`/catalogue`} className="bg-black font-normal font-poppins px-4 py-2  text-white max-w-max">
+              <Link
+                href={`/catalogue`}
+                className="bg-black font-normal font-poppins px-4 py-2  text-white max-w-max"
+              >
                 VIEW OUR COLLECTION
               </Link>
             </div>
@@ -210,8 +243,27 @@ export default function Home() {
         id="4"
         className="snap-start text-black"
       >
-        <div className="snap-start h-screen w-full text-black">
-          <div className="w-full h-full relative text-black">
+        <div className="snap-start h-[100svh] w-full text-black">
+          <div className=" md:hidden h-full w-full flex flex-col gap-4">
+            <img
+              src={`/images/banner3.webp`}
+              alt="banner image 3"
+              className="h-[300px] w-full bg-cover bg-center"
+            />
+            <div className="flex flex-col p-4 gap-8  justify-center items-center font-poppins">
+              <h1 className="text-base max-w-[1120px] text-center font-normal leading-[30px] ">
+                Throughout its evolution, Maison dOphelia has introduced
+                several fragrance collections including Antheia, Rose de Mai,
+                Medusa, Siren 1984, Odilia, and Papillon.
+              </h1>
+              <h1 className="text-base max-w-[1120px] text-center font-normal leading-[30px]  ">
+                Our perfumes are Eau de Extrait and Eau de Parfum, processed
+                with utmost care. We now present a new evolution where our
+                bottles are inspired by morning dew shape.
+              </h1>
+            </div>
+          </div>
+          <div className="hidden md:block w-full h-full relative text-black">
             <Image
               src={`/images/banner3.webp`}
               alt="banner image 3"
@@ -245,26 +297,26 @@ export default function Home() {
         id="5"
         className="snap-start text-black"
       >
-        <div className="snap-start h-screen w-full flex flex-col items-center justify-center gap-16 text-black relative">
-          <div className="flex gap-4 md:gap-16 items-center">
+        <div className="snap-start h-[100svh] w-full flex flex-col items-center md:justify-center pt-6 md:pt-0 gap-4 md:gap-16 text-black relative">
+          <div className="flex md:gap-16 items-center">
             <img
               src={"/images/home/banner3-image2.webp"}
               alt="logo"
-              className=" h-[150px] md:h-[400px] w-auto"
+              className="md:relative h-[150px] md:h-[400px] w-auto absolute -left-12"
             />
             <img
               src={"/images/home/banner3-image3.webp"}
               alt="logo"
-              className="h-[200px] md:h-[500px] w-auto"
+              className="h-[300px] md:h-[500px] w-auto"
             />
             <img
               src={"/images/home/banner3-image4.webp"}
               alt="logo"
-              className=" h-[150px] md:h-[400px] w-auto"
+              className="md:relative h-[150px] md:h-[400px] w-auto absolute -right-12"
             />
           </div>
           <Container>
-            <div className="flex flex-col gap-6 text-center px-6 md:px-0 font-poppins font-normal text-[16px]">
+            <div className="flex flex-col gap-6 text-center px-6 md:px-0 font-poppins font-normal text-[12px] md:text-[16px]">
               <p>
                 From the fragrance compositions to the bottle designs, Maison
                 dOphelia continually strives to introduce innovative creations.
@@ -281,7 +333,9 @@ export default function Home() {
             </div>
           </Container>
           <div className="bg-white text-center w-full p-6 absolute bottom-0">
-            <h1 className="text-3xl font-scheherazade">Reimagining the evolution of Ophelia in motion.</h1>
+            <h1 className="text-xl md:text-3xl font-scheherazade">
+              Reimagining the evolution of Ophelia in motion.
+            </h1>
           </div>
         </div>
       </section>
