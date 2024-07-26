@@ -17,7 +17,7 @@ export default function ProductList() {
     axios
       .get(
         // `${process.env.NEXT_PUBLIC_BASE_URL}/product`,
-        "https://humpback-immortal-hagfish.ngrok-free.app/api/product/product-type",
+        "https://humpback-immortal-hagfish.ngrok-free.app/api/product",
         {
           withCredentials: true,
           headers: {

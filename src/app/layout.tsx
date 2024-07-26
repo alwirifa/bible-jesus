@@ -21,8 +21,8 @@ const dm_sans_init = DM_Sans({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kemenkes Tracer Study",
-  description: "Kemenkes Tracer Study",
+  title: "Maison De Ophelia",
+  description: "Maison De Ophelia",
 };
 
 export default function RootLayout({

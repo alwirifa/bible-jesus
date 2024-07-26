@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
@@ -42,10 +41,11 @@ export default function Home() {
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const response = await axios.post(
-        "https://close-positive-bunny.ngrok-free.app/api/auth/login",
-        values,
-        { withCredentials: true }
+        "https://humpback-immortal-hagfish.ngrok-free.app/api/auth/login",
+        values
       );
+      const token = response.data.data.token;
+      localStorage.setItem("token", token);
       router.push("/admin");
       console.log("Response:", response.data);
     } catch (error) {
@@ -73,7 +73,7 @@ export default function Home() {
       <div className="h-full lg:flex flex-col items-center justify-center px-4">
         <Card className="w-full max-w-md">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl">Sign in </CardTitle>
+            <CardTitle className="text-2xl">Sign in</CardTitle>
             <CardDescription>
               Enter your email and password to sign in to your account.
             </CardDescription>
@@ -123,9 +123,12 @@ export default function Home() {
                     );
                   }}
                 />
-                <Button type="submit" className="w-full">
+                <button
+                  type="submit"
+                  className="w-full bg-zinc-950 text-white px-2 py-2 rounded-lg text-sm font-medium"
+                >
                   Sign in
-                </Button>
+                </button>
               </form>
             </Form>
           </CardContent>
@@ -137,7 +140,7 @@ export default function Home() {
             <span className="ml-1 hover:underline cursor-pointer">Sign up</span>
           </CardFooter>
 
-          <div onClick={()=> router.push('/forgot-password')}>
+          <div onClick={() => router.push('/forgot-password')}>
             forgot password
           </div>
         </Card>
