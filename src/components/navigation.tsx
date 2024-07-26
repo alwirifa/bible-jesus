@@ -34,36 +34,36 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
-  if (isMobile) {
-    return (
-      <div className="w-full bgred-500">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger>
-            <div className="pb-6 pl-6 w-full font-normal flex justify-between hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-black focus:bg-white/30 transition">
-              <Menu className="size-4" />
-            </div>
-          </SheetTrigger>
-          <SheetContent side="left" className="px-2">
-            <nav className="flex flex-col gap-y-2 py-6">
-              {routes.map((route) => (
-                <Button
-                  key={route.href}
-                  variant={route.href === pathname ? "secondary" : "ghost"}
-                  onClick={() => onClick(route.href)}
-                  className="w-full justify-start"
-                >
-                  {route.label}
-                </Button>
-              ))}
-            </nav>
-          </SheetContent>
-        </Sheet>
-      </div>
-    );
-  }
+  // if (isMobile) {
+  //   return (
+  //     <div className="w-full bgred-500">
+  //       <Sheet open={isOpen} onOpenChange={setIsOpen}>
+  //         <SheetTrigger>
+  //           <div className="pb-6 pl-6 w-full font-normal flex justify-between hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-black focus:bg-white/30 transition">
+  //             <Menu className="size-4" />
+  //           </div>
+  //         </SheetTrigger>
+  //         <SheetContent side="left" className="px-2">
+  //           <nav className="flex flex-col gap-y-2 py-6">
+  //             {routes.map((route) => (
+  //               <Button
+  //                 key={route.href}
+  //                 variant={route.href === pathname ? "secondary" : "ghost"}
+  //                 onClick={() => onClick(route.href)}
+  //                 className="w-full justify-start"
+  //               >
+  //                 {route.label}
+  //               </Button>
+  //             ))}
+  //           </nav>
+  //         </SheetContent>
+  //       </Sheet>
+  //     </div>
+  //   );
+  // }
 
   return (
-    <div className="hidden lg:flex justify-start gap-x-2 overflow-x-auto">
+    <div className="flex justify-start gap-x-2 overflow-x-auto">
       {routes.map((route) => (
         <NavButton
           key={route.href}

@@ -8,7 +8,7 @@ const HeaderLogo = (props: Props) => {
   return (
     <div>
       <Link href={"/"}>
-        <div className="items-center hidden lg:flex">
+        <div className="items-center flex">
           <Image src={"/images/MaisonLogo.svg"} alt="logo" height={90} width={250} />
         </div>
       </Link>
