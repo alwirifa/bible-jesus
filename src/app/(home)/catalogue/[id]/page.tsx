@@ -113,7 +113,7 @@ function page({ params }: { params: { id: string } }) {
       <Header />
       <Container>
         <div className="flex flex-col md:flex-row gap-4 md:gap-12 md:py-16">
-          <img src={perfume.img} className="w-auto h-[400px] md:h-[600px]" />
+          <img src={perfume.img} className="w-auto h-[400px] md:h-[600px] object-cover" />
           <div className="flex flex-col gap-4 justify-center p-6">
             <h1 className="text-xl uppercase">{perfume.type}</h1>
 

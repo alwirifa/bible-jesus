@@ -38,7 +38,7 @@ const page = (props: Props) => {
             </div>
             </div>
             <div className="w-full h-full ">
-              <img src={"/images/contact.jpg"} className="h-full w-full bg-cover max-h-[300px] md:max-h-[700px]" />
+              <img src={"/images/contact.jpg"} className="h-full w-full object-cover max-h-[300px] md:max-h-[700px]" />
             </div>
           </div>
       </div>
