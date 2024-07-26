@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, } from "next/font/google";
 import "./globals.css";
 
-import { Poppins, DM_Sans } from "next/font/google";
+import { Poppins, DM_Sans,Scheherazade_New  } from "next/font/google";
 import { Suspense } from "react";
 
 const poppins_init = Poppins({
@@ -16,6 +16,13 @@ const dm_sans_init = DM_Sans({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-dm_sans'
 })
+
+const scheherazade_new_init = Scheherazade_New({
+  subsets: ['latin'],
+  weight: [ '400', '500', '600', '700'],
+  variable: '--font-sceheherazade_new'
+})
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <Suspense>
 
-      <body className={`${poppins_init.variable} ${dm_sans_init.variable}`}>{children}</body>
+      <body className={`${poppins_init.variable} ${scheherazade_new_init.variable} ${dm_sans_init.variable}`}>{children}</body>
       </Suspense>
     </html>
   );

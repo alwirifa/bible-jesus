@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "@/components/container";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -96,19 +97,19 @@ const Footer: React.FC = () => {
             <h3 className="text-xl lg:text-[22px] font-[700]">Navigation</h3>
             <ul className="text-grey text-lg sm:text-xl capitalize space-y-4">
               <li>
-                <a href="#" className="hover:text-gray-400">
+                <Link href={"/catalogue"} className="hover:text-gray-400">
                   Catalogue
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-400">
+                <Link href={"/article"} className="hover:text-gray-400">
                   Article
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-400">
+                <Link href={"/contact"} className="hover:text-gray-400">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -199,16 +200,17 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="px-6 md:px-0">
-          <div className="flex flex-col lg:flex-row justify-between items-center w-full text-lg sm:text-xl font-[400] text-grey border-t border-white pt-6 lg:pt-6 px-2 pb-4">
-            <p className="text-center lg:text-left">
-              Copyright 2024 Maison D Ophelia
+          <div className="flex flex-col lg:flex-row justify-between items-center w-full font-dm_sans font-[400] text-grey border-t border-white pt-6 lg:pt-6 px-2 pb-4">
+            <p className="text-center lg:text-left text-lg">
+              Copyright © 2024 Maison D&apos; Ophelia
             </p>
-            <div className="flex md:text-base text-smgap-4 mt-4 lg:mt-0">
-              <p> All Rights Reserved | </p>
+            <div className="flex text-lg gap-2">
+              <p className="text-xl"> All Rights Reserved</p>
+              <p> | </p>
               <a href="#" className="hover:text-gray-400">
                 Terms and Conditions
-              </a>{" "}
-              |{" "}
+              </a>
+              <p> | </p>
               <a href="#" className="hover:text-gray-400">
                 Privacy Policy
               </a>

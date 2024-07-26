@@ -23,6 +23,7 @@ const config = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         dm_sans: ["var(--font-dm_sans)"],
+        scheherazade: ["var(--font-sceheherazade_new)"]
       },
       backgroundImage: {
         'banner3': "url('/images/banner3.webp')",

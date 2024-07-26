@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { CarouselHome } from "@/components/user/home/carousel";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
 export default function Home() {
@@ -72,7 +73,7 @@ export default function Home() {
                 alt="logo"
                 className="w-[350px] h-auto"
               />
-              <div className="md:absolute mt-6 text-center md:text-left md:mt-0 bottom-0 left-0 leading-[20px]">
+              <div className="md:absolute mt-6 text-center text-xl md:text-left md:mt-0 bottom-0 left-0 leading-[20px] font-scheherazade">
                 <p>The Scents of Flower </p>
                 <p>And Sweet Memory of Butterflies</p>
               </div>
@@ -150,8 +151,8 @@ export default function Home() {
           </div>
 
           <div className=" h-auto flex flex-col gap-4 items-center text-center pt-6 px-6">
-            <h1 className="text-4xl font-semibold">Maison D&apos; Ophelia</h1>
-            <p className="max-w-[34rem]">
+            <h1 className="text-7xl font-normal font-scheherazade">Maison D&apos; Ophelia</h1>
+            <p className="max-w-[48rem] font-poppins font-normal text-[20px]">
               is an Indonesian local perfume brand founded by Zulham Siregar,
               who also the Perfume Creation Director with a career based in
               Paris, France.
@@ -168,35 +169,35 @@ export default function Home() {
         className="snap-start text-black"
       >
         <Container>
-          <div className="snap-start h-screen w-full text-black flex gap-16 items-center">
-            <div className="h-full w-full md:flex items-center p-16 hidden ">
+          <div className="snap-start h-screen w-full text-black flex justify-between gap-16 p-16 ">
+            <div className="h-full w-full md:flex items-center  hidden ">
               <img
                 src={"/images/home/banner3-image1.webp"}
                 alt="logo"
                 className="w-auto h-full"
               />
             </div>
-            <div className="h-full w-full flex flex-col   justify-center gap-4 px-6 md:px-0">
-              <div className="w-full flex justify-center items-center">
+            <div className="h-full w-full flex flex-col justify-between gap-4 px-2 md:px-0">
+              <div className="w-full flex justify-center items-center ">
                 <img
                   src={"/images/home/banner3-image2.webp"}
                   alt="logo"
                   className=" h-[400px] w-auto"
                 />
               </div>
-              <h1 className="text-5xl font-semibold mt-6">
+              <h1 className="text-4xl md:text-7xl font-normal mt-6 font-scheherazade">
                 Follow The Fragnance
               </h1>
-              <p className="font-medium max-w-md text-justify">
+              <p className="font-normal max-w-xl text-justify text-[16px] md:text-[20px]">
                 Our perfumes are meticulously crafted using natural raw
                 materials sourced both locally and from the finest imports,
                 employing traditional production methods from Kannauj, Jaipur,
                 and New York—from flower harvesting and distillation to
                 blending—all done in the traditional manner.
               </p>
-              <div className="bg-black px-4 py-2  text-white max-w-max">
+              <Link href={`/catalogue`} className="bg-black font-normal font-poppins px-4 py-2  text-white max-w-max">
                 VIEW OUR COLLECTION
-              </div>
+              </Link>
             </div>
           </div>
         </Container>
@@ -217,15 +218,15 @@ export default function Home() {
               layout="fill"
               objectFit="cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center text-center text-white">
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white p-6 md:p-0">
               <Container>
-                <div className="flex flex-col gap-6 justify-center items-center">
-                  <h1 className="text-base md:text-3xl max-w-5xl text-center bg-nlue-500 leading-loose">
-                    Maison d&apos;Ophelia has introduced several fragrance
+                <div className="flex flex-col gap-16 mt-28 justify-center items-center font-scheherazade">
+                  <h1 className="text-2xl md:text-4xl max-w-[1120px] text-center font-normal leading-[40px] md:leading-[90px] ">
+                    Maison d&apos; Ophelia has introduced several fragrance
                     collections including Antheia, Rose de Mai, Medusa, Siren
                     1984, Odilia, and Papillon.
                   </h1>
-                  <h1 className="text-base md:text-3xl max-w-5xl leading-loose">
+                  <h1 className="text-2xl md:text-4xl max-w-[1120px] text-center font-normal leading-[40px] md:leading-[90px] ">
                     Our perfumes are Eau de Extrait and Eau de Parfum, processed
                     with utmost care. We now present a new evolution where our
                     bottles are inspired by morning dew shape.
@@ -263,7 +264,7 @@ export default function Home() {
             />
           </div>
           <Container>
-            <div className="flex flex-col gap-6 text-center px-6 md:px-0 ">
+            <div className="flex flex-col gap-6 text-center px-6 md:px-0 font-poppins font-normal text-[16px]">
               <p>
                 From the fragrance compositions to the bottle designs, Maison
                 dOphelia continually strives to introduce innovative creations.
@@ -280,7 +281,7 @@ export default function Home() {
             </div>
           </Container>
           <div className="bg-white text-center w-full p-6 absolute bottom-0">
-            <h1 className="text-2xl">Reimagining the evolution .</h1>
+            <h1 className="text-3xl font-scheherazade">Reimagining the evolution of Ophelia in motion.</h1>
           </div>
         </div>
       </section>
@@ -298,8 +299,7 @@ export default function Home() {
       {activeSection === "footer" ? (
         <div></div>
       ) : (
-        <div>
-          <p>current section: {activeSection}</p>
+        <div className="hidden md:block">
           <div className={`fixed bottom-1/2 top-1/2 left-0`}>
             <div className="fixed left-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
               <button
