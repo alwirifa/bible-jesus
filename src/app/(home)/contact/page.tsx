@@ -9,11 +9,11 @@ const page = (props: Props) => {
   return (
     <div>
       <Header />
-      <div className="h-full">
-        <Container>
-          <div className="flex">
+      <div className="h-full bg-white">
+        
+          <div className="flex md:flex-row flex-col-reverse">
             <div className="w-full py-16 px-6 flex flex-col gap-4">
-              <h1 className="text-2xl font-semibold">
+              <h1 className="text-2xl md:text-4xl font-semibold">
                 Were Here to Help You Find Your Perfect Scent
               </h1>
               <p>
@@ -23,19 +23,24 @@ const page = (props: Props) => {
                 perfumes, need assistance with an order, or simply want to share
                 your experience with us, we are here to assist you.
               </p>
-              <p className="text-xl font-semibold">Send Us a Message</p>
-            <form>
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
+              <p className="text-lg md:text-xl font-semibold">Send Us a Message</p>
+            <form className="flex flex-col gap-4">
+              <div className="flex md:flex-row flex-col gap-4">
+
+              <input type="text" className="border-2 border-black py-4 px-3 w-full" placeholder="Name" />
+              <input type="text" className="border-2 border-black py-4 px-3 w-full" placeholder="Email" />
+              </div>
+              <textarea rows={4} className="border-2 border-black w-full py-4 px-3" placeholder="Messages" />
             </form>
-              <button className="px-6 py-2 bg-black text-white">SEND</button>
+            <div className="md:max-w-max w-full">
+
+              <button className="px-10 py-3 w-full bg-black text-white">SEND</button>
             </div>
-            <div>
-              <img src={"/images/contact.jpg"} className="h-full w-full" />
+            </div>
+            <div className="w-full h-full ">
+              <img src={"/images/contact.jpg"} className="h-full w-full bg-cover max-h-[300px] md:max-h-[700px]" />
             </div>
           </div>
-        </Container>
       </div>
 
       <Footer />

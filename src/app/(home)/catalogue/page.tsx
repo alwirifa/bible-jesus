@@ -11,8 +11,8 @@ const page = (props: Props) => {
     <div>
       <Header />
       <Container>
-        <div className="text-2xl font-semibold w-full text-center p-6">
-          <h1>DISCOVER THE FRAGRANCE</h1>
+        <div className="text-base md:text-2xl font-bold w-full text-center p-6">
+          <h1 >DISCOVER THE FRAGRANCE</h1>
         </div>
         <CatalogueHome />
       </Container>
