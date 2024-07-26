@@ -280,9 +280,7 @@ export default function Home() {
             </div>
           </Container>
           <div className="bg-white text-center w-full p-6 absolute bottom-0">
-            <h1 className="text-2xl">
-              Reimagining the evolution .
-            </h1>
+            <h1 className="text-2xl">Reimagining the evolution .</h1>
           </div>
         </div>
       </section>
@@ -311,7 +309,7 @@ export default function Home() {
                 <div
                   className={` h-2 w-2 rounded-full  ${
                     activeSection === "0" || activeSection === "header"
-                      ? "bg-black"
+                      ? "bg-neutral-400"
                       : "bg-transparent"
                   }`}
                 ></div>
@@ -332,7 +330,7 @@ export default function Home() {
               >
                 <div
                   className={` h-2 w-2 rounded-full  ${
-                    activeSection === "2" ? "bg-black" : "bg-transparent"
+                    activeSection === "2" ? "bg-neutral-400" : "bg-transparent"
                   }`}
                 ></div>
               </button>
