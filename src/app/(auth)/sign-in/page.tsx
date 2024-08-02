@@ -41,7 +41,7 @@ export default function Home() {
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const response = await axios.post(
-        "https://humpback-immortal-hagfish.ngrok-free.app/api/auth/login",
+        "http://194.233.81.100:8085/api/auth/login",
         values
       );
       const token = response.data.data.token;

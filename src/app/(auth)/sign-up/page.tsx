@@ -45,7 +45,7 @@ export default function Home() {
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const response = await axios.post(
-        "https://humpback-immortal-hagfish.ngrok-free.app/api/auth/register",
+        "",
         values
       );
       // router.push("/admin");
